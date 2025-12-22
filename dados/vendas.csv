@@ -1,0 +1,133 @@
+Data,Produto,Vendido,Preco_Unitario
+2024-01-01,Café Expresso,49,1.2
+2024-01-01,Croissant,28,1.5
+2024-01-01,Tosta Mista,8,3.5
+2024-01-01,Sumo Natural,11,2.5
+2024-01-02,Café Expresso,48,1.2
+2024-01-02,Croissant,22,1.5
+2024-01-02,Tosta Mista,23,3.5
+2024-01-02,Sumo Natural,14,2.5
+2024-01-03,Café Expresso,47,1.2
+2024-01-03,Croissant,28,1.5
+2024-01-03,Tosta Mista,17,3.5
+2024-01-03,Sumo Natural,15,2.5
+2024-01-04,Café Expresso,46,1.2
+2024-01-04,Croissant,25,1.5
+2024-01-04,Tosta Mista,23,3.5
+2024-01-04,Sumo Natural,2,2.5
+2024-01-05,Café Expresso,43,1.2
+2024-01-05,Croissant,18,1.5
+2024-01-05,Tosta Mista,19,3.5
+2024-01-05,Sumo Natural,10,2.5
+2024-01-06,Café Expresso,40,1.2
+2024-01-06,Croissant,29,1.5
+2024-01-06,Tosta Mista,23,3.5
+2024-01-06,Sumo Natural,10,2.5
+2024-01-07,Café Expresso,40,1.2
+2024-01-07,Croissant,30,1.5
+2024-01-07,Tosta Mista,25,3.5
+2024-01-07,Sumo Natural,25,2.5
+2024-01-08,Café Expresso,41,1.2
+2024-01-08,Croissant,37,1.5
+2024-01-08,Tosta Mista,18,3.5
+2024-01-08,Sumo Natural,12,2.5
+2024-01-09,Café Expresso,43,1.2
+2024-01-09,Croissant,28,1.5
+2024-01-09,Tosta Mista,20,3.5
+2024-01-09,Sumo Natural,13,2.5
+2024-01-10,Café Expresso,44,1.2
+2024-01-10,Croissant,26,1.5
+2024-01-10,Tosta Mista,10,3.5
+2024-01-10,Sumo Natural,15,2.5
+2024-01-11,Café Expresso,36,1.2
+2024-01-11,Croissant,31,1.5
+2024-01-11,Tosta Mista,13,3.5
+2024-01-11,Sumo Natural,14,2.5
+2024-01-12,Café Expresso,44,1.2
+2024-01-12,Croissant,23,1.5
+2024-01-12,Tosta Mista,13,3.5
+2024-01-12,Sumo Natural,9,2.5
+2024-01-13,Café Expresso,46,1.2
+2024-01-13,Croissant,39,1.5
+2024-01-13,Tosta Mista,15,3.5
+2024-01-13,Sumo Natural,16,2.5
+2024-01-14,Café Expresso,50,1.2
+2024-01-14,Croissant,30,1.5
+2024-01-14,Tosta Mista,23,3.5
+2024-01-14,Sumo Natural,12,2.5
+2024-01-15,Café Expresso,41,1.2
+2024-01-15,Croissant,29,1.5
+2024-01-15,Tosta Mista,18,3.5
+2024-01-15,Sumo Natural,12,2.5
+2024-01-16,Café Expresso,53,1.2
+2024-01-16,Croissant,20,1.5
+2024-01-16,Tosta Mista,19,3.5
+2024-01-16,Sumo Natural,15,2.5
+2024-01-17,Café Expresso,39,1.2
+2024-01-17,Croissant,24,1.5
+2024-01-17,Tosta Mista,14,3.5
+2024-01-17,Sumo Natural,10,2.5
+2024-01-18,Café Expresso,52,1.2
+2024-01-18,Croissant,19,1.5
+2024-01-18,Tosta Mista,20,3.5
+2024-01-18,Sumo Natural,15,2.5
+2024-01-19,Café Expresso,40,1.2
+2024-01-19,Croissant,25,1.5
+2024-01-19,Tosta Mista,15,3.5
+2024-01-19,Sumo Natural,10,2.5
+2024-01-20,Café Expresso,47,1.2
+2024-01-20,Croissant,28,1.5
+2024-01-20,Tosta Mista,24,3.5
+2024-01-20,Sumo Natural,9,2.5
+2024-01-21,Café Expresso,46,1.2
+2024-01-21,Croissant,23,1.5
+2024-01-21,Tosta Mista,27,3.5
+2024-01-21,Sumo Natural,11,2.5
+2024-01-22,Café Expresso,43,1.2
+2024-01-22,Croissant,27,1.5
+2024-01-22,Tosta Mista,11,3.5
+2024-01-22,Sumo Natural,2,2.5
+2024-01-23,Café Expresso,43,1.2
+2024-01-23,Croissant,26,1.5
+2024-01-23,Tosta Mista,28,3.5
+2024-01-23,Sumo Natural,9,2.5
+2024-01-24,Café Expresso,39,1.2
+2024-01-24,Croissant,19,1.5
+2024-01-24,Tosta Mista,29,3.5
+2024-01-24,Sumo Natural,12,2.5
+2024-01-25,Café Expresso,49,1.2
+2024-01-25,Croissant,18,1.5
+2024-01-25,Tosta Mista,19,3.5
+2024-01-25,Sumo Natural,16,2.5
+2024-01-26,Café Expresso,42,1.2
+2024-01-26,Croissant,25,1.5
+2024-01-26,Tosta Mista,20,3.5
+2024-01-26,Sumo Natural,7,2.5
+2024-01-27,Café Expresso,37,1.2
+2024-01-27,Croissant,36,1.5
+2024-01-27,Tosta Mista,20,3.5
+2024-01-27,Sumo Natural,13,2.5
+2024-01-28,Café Expresso,34,1.2
+2024-01-28,Croissant,23,1.5
+2024-01-28,Tosta Mista,17,3.5
+2024-01-28,Sumo Natural,18,2.5
+2024-01-29,Café Expresso,36,1.2
+2024-01-29,Croissant,25,1.5
+2024-01-29,Tosta Mista,19,3.5
+2024-01-29,Sumo Natural,11,2.5
+2024-01-30,Café Expresso,54,1.2
+2024-01-30,Croissant,28,1.5
+2024-01-30,Tosta Mista,14,3.5
+2024-01-30,Sumo Natural,9,2.5
+2024-01-31,Café Expresso,39,1.2
+2024-01-31,Croissant,27,1.5
+2024-01-31,Tosta Mista,16,3.5
+2024-01-31,Maca,15,1
+2024-02-01,Maca,15,1
+2024-02-01,Sumo Natural,119,2.5
+2024-02-01,Banana,1,2.5
+2024-02-02,Banana,1,2.6
+2024-02-03,Sumo Natural,1000,2.5
+2024-02-03,Banana,1,2.5
+2024-02-03,Tosta Mista,10000,2.6
+2024-02-03,Croissant,1000,2.7
