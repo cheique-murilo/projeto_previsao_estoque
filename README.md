@@ -125,7 +125,7 @@ The final stage of this project consists of connecting the generated .csv report
 ```mermaid
 graph TD
     %% INPUTS
-    subgraph 📥 Data Sources
+    subgraph Data Sources 📥
         Vendas[vendas.csv]
         Estoque[estoque.csv]
         Compras[compras.csv]
@@ -133,7 +133,7 @@ graph TD
     end
 
     %% PROCESSING
-    subgraph ⚙️ Processing Modules
+    subgraph Processing Modules ⚙️
         Consumo[ConsumoMedio<br/>Average Consumption]
         Previsao[PrevisaoDemanda<br/>Demand Forecast]
         EstoqueManager[EstoqueManager<br/>Inventory Update]
@@ -141,14 +141,14 @@ graph TD
     end
 
     %% OUTPUTS
-    subgraph 📤 CSV Outputs
+    subgraph CSV Outputs 📤
         RelConsumo[consumo_medio.csv]
         RelEstoque[estoque_atualizado.csv]
         RelCompras[necessidade_compras.csv]
     end
 
     %% VISUALIZATION
-    subgraph 📊 Power BI Dashboard
+    subgraph Power BI Dashboard 📊
         Dashboard[Interactive Visual Reports]
     end
 
