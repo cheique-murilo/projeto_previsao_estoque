@@ -55,7 +55,7 @@ df_consumo = pd.DataFrame(consumo_relatorio, columns=[
     "Produto", "Consumo_7", "Consumo_30", "Consumo_90", "Tendencia"
 ])
 
-df_consumo.to_csv("consumo_medio.csv", index=False)
+df_consumo.to_csv("consumo_medio.csv", index=False,  decimal=",")
 print("📊 Relatório de consumo médio gerado: data/consumo_medio.csv")
 
 # ============================================================
@@ -66,7 +66,7 @@ estoque_manager.aplicar_vendas(vendas, ultima_data)
 estoque_manager.aplicar_compras(compras, ultima_data)
 
 estoque_atualizado = estoque_manager.estoque
-estoque_atualizado.to_csv("estoque_atualizado.csv", index=False)
+estoque_atualizado.to_csv("estoque_atualizado.csv", index=False, decimal=",")
 print("📦 Estoque atualizado salvo em: data/estoque_atualizado.csv")
 
 # ============================================================
@@ -89,7 +89,7 @@ df_necessidade = pd.DataFrame(resultados, columns=[
     "Produto", "Demanda_10_Dias", "Quantidade_Sugerida"
 ])
 
-df_necessidade.to_csv("necessidade_compras.csv", index=False)
+df_necessidade.to_csv("necessidade_compras.csv", index=False, decimal=",")
 print("🛒 Necessidade de compras gerada: data/necessidade_compras.csv")
 
 print("\n✅ Pipeline completo executado com sucesso!")

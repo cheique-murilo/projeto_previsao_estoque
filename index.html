@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini ERP for Financial Control</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f0f1a;
+      color: #e6e6e6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: #151526;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    header p {
+      opacity: 0.75;
+      max-width: 650px;
+      margin: auto;
+      font-size: 1rem;
+    }
+
+    section {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #8f82ff;
+      font-weight: 600;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 30px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 12px 22px;
+      background: #8f82ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      opacity: 0.5;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Mini ERP for Financial Control 📈</h1>
+  <p>Transforming spreadsheets into a professional system using SQL Server, Python, and Power BI.</p>
+</header>
+
+<section>
+  <h2>📌 Project Overview</h2>
+  <div class="card">
+    <p>
+      This project demonstrates how small businesses can evolve from manual Excel-based controls 
+      to a more professional environment using a SQL database and Power BI reporting.
+      All data used is fictional, simulating a real consulting scenario for a small auto parts company.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>🧩 Project Architecture</h2>
+  <div class="card">
+    <img src="assets/fluxo.png" alt="Project Flow">
+    <p>Full workflow: Excel → Python → SQL Server (MERGE) → Power BI</p>
+  </div>
+</section>
+
+<section>
+  <h2>🐍 Python ETL</h2>
+  <div class="card">
+    <p>Python was used to:</p>
+    <ul>
+      <li>Read Excel files</li>
+      <li>Clean and validate data</li>
+      <li>Generate unique audit hashes</li>
+      <li>Send data to SQL Server using MERGE</li>
+    </ul>
+    <a href="https://github.com/cheique-murilo/projeto_controle_financeiro/tree/main/src" class="button" target="_blank">
+      📄 View Python Code on GitHub
+    </a>
+  </div>
+</section>
+
+<section>
+  <h2>💻 SQL Server</h2>
+  <div class="card">
+    <p>SQL Server ensures:</p>
+    <ul>
+      <li>No duplicated records</li>
+      <li>Incremental data loading</li>
+      <li>Reliable auditing</li>
+    </ul>
+    <img src="assets/database_sql.png" alt="SQL Structure">
+  </div>
+</section>
+
+<section>
+  <h2>📊 Power BI Dashboard</h2>
+  <div class="card">
+    <p>Power BI provides dashboards such as:</p>
+    <ul>
+      <li>Cash flow analysis</li>
+      <li>Revenue and expense tracking</li>
+      <li>Data audit validation</li>
+      <li>Budget vs Actual</li>
+    </ul>
+    <img src="assets/pbi.png" alt="Power BI Dashboard">
+  </div>
+</section>
+
+<section>
+  <h2>📁 GitHub Repository</h2>
+  <a href="https://github.com/cheique-murilo/projeto_controle_financeiro" class="button" target="_blank">
+    Access Repository
+  </a>
+</section>
+
+<footer>
+  © 2025 Murilo Evangelista — Data Analytics & Automation
+</footer>
+
+</body>
+</html>

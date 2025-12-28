@@ -1,20 +1,19 @@
-# 📘 README - Sistema de previsão de demanda, necessidade de compras e gestão de estoque
+# 📘 README - Demand forecasting, purchase planning and inventory management system
 
-## Visão Geral
+## Overview
 
-Este projeto implementa um pipeline completo de previsão de demanda e gestão de estoque, totalmente modular e orientado a objetos. 
-O objetivo é permitir que qualquer operação — restaurante, varejo, produção ou distribuição — consiga responder a quatro perguntas fundamentais:
+This project implements a complete demand‑forecasting and inventory‑management pipeline, fully modular and object‑oriented. The goal is to enable any operation - restaurants, retail, manufacturing, or distribution - to answer four essential questions:
 
-- O que foi vendido?
-- Quanto vou vender?
-- Quanto preciso comprar?
-- Quanto tenho disponível?
+- What was sold??
+- How much will I sell?
+- How much do I need to buy?
+- How much stock do I currently have?
 
-O sistema automatiza todo o processo, desde a leitura dos dados até a geração das necessidades de compra e atualização do estoque.
+The system automates the entire process, from reading raw data to generating purchase requirements and updating inventory levels.
 
-## Arquitetura do Projeto
+## Project architecture
 
-A estrutura é organizada para manter clareza, modularidade e facilidade de manutenção:
+The structure is designed for clarity, modularity, and maintainability:
 
 ```
 /projeto_previsao/
@@ -35,89 +34,143 @@ A estrutura é organizada para manter clareza, modularidade e facilidade de manu
 └── README.md
 ```
 
-Cada módulo contém uma classe com responsabilidade única, seguindo boas práticas de arquitetura.
+Each module contains a single class with a well‑defined responsibility, following clean architecture principles.
 
-## Componentes principais: 
+## Main components: 
 
 ### 1️. ConsumoMedio (modules/consumo.py)
-Responsável por analisar o histórico de vendas e calcular:
+Responsible for analyzing historical sales and calculating:
 
-- consumo médio diário (7, 15, 30, 90 dias)
-- tendência de consumo (subindo, caindo, estável)
+- average daily consumption (7, 15, 30, 90 days)
+- consumption trend (increasing, decreasing, stable)
 
-Essa classe transforma dados brutos de vendas em indicadores úteis para previsão.
+This class transforms raw sales data into meaningful indicators for forecasting.
 
 ### 2️. PrevisaoDemanda (modules/previsao.py)
-Responsável por gerar a previsão de demanda futura usando Facebook Prophet, um modelo estatístico avançado que captura:
+Generates future demand forecasts using Facebook Prophet, an advanced statistical model capable of capturing:
 
-- tendência
-- sazonalidade semanal
-- sazonalidade anual
-- variações naturais de consumo
+- trend
+- weekly seasonality
+- yearly seasonality
+- natural consumption variations
 
-Ela estima o consumo futuro para um período definido (ex.: próximos 10 dias).
+It estimates future consumption for a defined period (e.g., the next 15 days).
 
 ### 3️. NecessidadeCompras (modules/necessidade.py)
-Responsável por calcular quanto precisa ser comprado, considerando:
+Calculates how much needs to be purchased, considering:
 
-- demanda prevista
-- estoque atual
-- compras futuras já realizadas
-- prazo de entrega
-- estoque alvo
+- forecasted demand
+- current inventory
+- incoming purchase orders
+- supplier lead time
+- target stock level
 
-A fórmula geral é:
-necessidade = max(estoque_alvo - (estoque_atual + compras_futuras), 0)
-Ou seja: só recomenda comprar se realmente faltar produto.
+General formula:
+necessity = max(target_stock - (current_stock + incoming_purchases), 0)
+In other words: it only recommends purchasing when stock is insufficient
 
 ### 4️. EstoqueManager (modules/estoque.py)
-Responsável por atualizar o estoque automaticamente:
+Automatically updates inventory by:
 
-- subtrai vendas do período
-- soma compras recebidas
-- mantém o estoque sempre atualizado
+- subtracting sales
+- adding received purchases
+- keeping stock levels accurate and up to date
 
-Isso garante que o sistema trabalhe sempre com dados reais.
+This ensures the system always works with real, reliable data.
 
 ## Fluxo Completo do Sistema 
-O arquivo main.py orquestra todo o processo:
+The main.py file orchestrates the entire pipeline:
 
-### 1. Carrega os dados:
+### 1. Load data:
 
-- estoque
-- vendas
-- compras
-- fornecedores
+- inventory
+- sales
+- purchases
+- suppliers
 
-### 2. Atualiza o estoque:
+### 2. Update inventory:
 
-- aplica vendas do último dia
-- aplica compras recebidas
+- apply sales from the latest day
+- apply received purchases
 
-### 3. Calcula consumo médio para cada produto:
+### 3. Calculate average consumption for each product:
 
-- consumo 7 dias
-- consumo 15 dias
-- consumo 30 dias
-- consumo 90 dias
-- tendência
+- 7‑day consumption
+- 15‑day consumption
+- 30‑day consumption
+- 90‑day consumption
+- trend
 
-### 4. Gera previsão de demanda:
-Usando Prophet, estima o consumo futuro (ex.: próximos 15 dias).
+### 4. Generate demand forecast:
+Using Prophet, estimate future consumption (e.g., next 15 days).
 
-### 5. Calcula necessidade de compras com base em:
+### 5. Calculate purchase requirements based on:
 
-- previsão
-- estoque atual
-- compras futuras
-- estoque alvo
+- forecast
+- current stock
+- incoming purchases
+- target stock level
 
-### 6. Gera relatórios:
-- necessidade de compras
-- estoque atualizado
+### 6. Generate .csv reports:
+- purchase requirements
+- updated inventory
 
-## Próximos passos e melhorias
 
-- criar um banco de dados (talvez SQL) para atualizar e armazenar melhor os dados
-- automatizar alguns parquivos que ainda não foram automatizados nessa versão, que ainda devem ser atualizados manualmente (compras e fornecedores)
+## PBI integration
 
+The final stage of this project consists of connecting the generated .csv reports to Power BI in order to visualize the entire forecasting and inventory‑management pipeline through interactive dashboards. This integration transforms the forecasting engine into a complete decision‑support system, allowing managers to monitor stock, anticipate shortages, and plan purchases visually and intuitively.
+
+## System architecture diagram
+
+```mermaid
+graph TD
+    %% INPUTS
+    subgraph 📥 Data Sources
+        Vendas[vendas.csv]
+        Estoque[estoque.csv]
+        Compras[compras.csv]
+        Fornecedores[fornecedores.csv]
+    end
+
+    %% PROCESSING
+    subgraph ⚙️ Processing Modules
+        Consumo[ConsumoMedio<br/>Average Consumption]
+        Previsao[PrevisaoDemanda<br/>Demand Forecast]
+        EstoqueManager[EstoqueManager<br/>Inventory Update]
+        Necessidade[NecessidadeCompras<br/>Purchase Planning]
+    end
+
+    %% OUTPUTS
+    subgraph 📤 CSV Outputs
+        RelConsumo[consumo_medio.csv]
+        RelEstoque[estoque_atualizado.csv]
+        RelCompras[necessidade_compras.csv]
+    end
+
+    %% VISUALIZATION
+    subgraph 📊 Power BI Dashboard
+        Dashboard[Interactive Visual Reports]
+    end
+
+    %% FLOWS
+    Vendas --> Consumo
+    Vendas --> Previsao
+    Estoque --> EstoqueManager
+    Compras --> EstoqueManager
+    Fornecedores --> Necessidade
+
+    Consumo --> RelConsumo
+    EstoqueManager --> RelEstoque
+    Previsao --> Necessidade
+    EstoqueManager --> Necessidade
+    Necessidade --> RelCompras
+
+    RelConsumo --> Dashboard
+    RelEstoque --> Dashboard
+    RelCompras --> Dashboard
+```
+
+# Next Steps and Improvements
+
+- Implement a database (possibly SQL) to store and update data more efficiently
+- Automate files that still require manual updates in this version (purchases and suppliers)
