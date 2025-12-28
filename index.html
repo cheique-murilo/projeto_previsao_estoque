@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mini ERP for Financial Control</title>
+  <title>Demand forecasting, purchase planning and inventory management system</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -86,17 +86,21 @@
 <body>
 
 <header>
-  <h1>Mini ERP for Financial Control 📈</h1>
-  <p>Transforming spreadsheets into a professional system using SQL Server, Python, and Power BI.</p>
+  <h1>Demand forecasting, purchase planning and inventory management system 💻</h1>
+  <p>The system automates the entire process, from reading raw data to generating purchase requirements and updating inventory levels</p>
 </header>
 
 <section>
   <h2>📌 Project Overview</h2>
   <div class="card">
     <p>
-      This project demonstrates how small businesses can evolve from manual Excel-based controls 
-      to a more professional environment using a SQL database and Power BI reporting.
-      All data used is fictional, simulating a real consulting scenario for a small auto parts company.
+      This project implements a complete demand‑forecasting and inventory‑management pipeline, fully modular and object‑oriented. 
+      The goal is to enable any operation - restaurants, retail, manufacturing, or distribution - to answer four essential questions:
+
+      - What was sold??
+      - How much will I sell?
+      - How much do I need to buy?
+      - How much stock do I currently have?
     </p>
   </div>
 </section>
@@ -104,8 +108,8 @@
 <section>
   <h2>🧩 Project Architecture</h2>
   <div class="card">
-    <img src="assets/fluxo.png" alt="Project Flow">
-    <p>Full workflow: Excel → Python → SQL Server (MERGE) → Power BI</p>
+    <img src="assets/flow.png" alt="Project Flow">
+    <p>Full workflow: .csv → Python → .csv → Power BI</p>
   </div>
 </section>
 
@@ -114,27 +118,14 @@
   <div class="card">
     <p>Python was used to:</p>
     <ul>
-      <li>Read Excel files</li>
+      <li>Read .csv files</li>
       <li>Clean and validate data</li>
-      <li>Generate unique audit hashes</li>
-      <li>Send data to SQL Server using MERGE</li>
+      <li>Generate trend and necessities</li>
+      <li>Transform info in a new .csv file for PBI use</li>
     </ul>
-    <a href="https://github.com/cheique-murilo/projeto_controle_financeiro/tree/main/src" class="button" target="_blank">
+    <a href="https://github.com/cheique-murilo/projeto_previsao_estoque/blob/main/main.py" class="button" target="_blank">
       📄 View Python Code on GitHub
     </a>
-  </div>
-</section>
-
-<section>
-  <h2>💻 SQL Server</h2>
-  <div class="card">
-    <p>SQL Server ensures:</p>
-    <ul>
-      <li>No duplicated records</li>
-      <li>Incremental data loading</li>
-      <li>Reliable auditing</li>
-    </ul>
-    <img src="assets/database_sql.png" alt="SQL Structure">
   </div>
 </section>
 
@@ -148,13 +139,13 @@
       <li>Data audit validation</li>
       <li>Budget vs Actual</li>
     </ul>
-    <img src="assets/pbi.png" alt="Power BI Dashboard">
+    <img src="assets/dashboard.png" alt="Power BI Dashboard">
   </div>
 </section>
 
 <section>
   <h2>📁 GitHub Repository</h2>
-  <a href="https://github.com/cheique-murilo/projeto_controle_financeiro" class="button" target="_blank">
+  <a href="https://github.com/cheique-murilo/projeto_previsao_estoque" class="button" target="_blank">
     Access Repository
   </a>
 </section>
